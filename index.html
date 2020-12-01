@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Mykola Shostak">
+    <title>Homework #1</title>
+</head>
+<body>
+    <header>Homework #1</header>
+    <h1>Сheat sheet for Git</h1>
+    <hr>
+    <div>
+        <ul>
+            <li><a href="#git config --global user.name">git config --global user.name</a></li>
+            <li><a href="#git config --global user.email">git config --global user.email</a></li>
+            <li><a href="#git init">git init</a></li>
+            <li><a href="#git status">git status</a></li>
+            <li><a href="#git add">git add</a></li>
+            <li><a href="#git commit">git commit</a></li>
+            <li><a href="#git log">git log</a></li>
+            <li><a href="#git checkout">git checkout</a></li>
+            <li><a href="#git branch">git branch</a></li>
+            <li><a href="#git push">git push</a></li>
+            <li><a href="#git pull">git pull</a></li>
+            <li><a href="#git merge">git merge</a></li>
+            <li><a href="#git clone">git clone</a></li>
+            <li><a href="#git revert">git revert</a></li>
+            <li><a href="#git reset">git reset</a></li>
+            <li><a href="#git rebase">git rebase</a></li>
+            <li><a href="#git cherry-pick">git cherry-pick</a></li>
+            <li><a href="#git stash">git stash</a></li>
+            <li><a href="#.gitignore">.gitignore</a></li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <table border="2" width="90%" cellpadding="6">
+            <CAPTION><h3><b><em>Git command list</em></b></h3></CAPTION>
+            <thead>
+                <tr>
+                    <th>Command</th>
+                    <th>Explanation</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td id="git config --global user.name"><code>git config --global user.name</code></td>
+                <td> Задати ім’я </td>
+            </tr>
+            <tr>
+                <td id="git config --global user.email"><code>git config --global user.email</code></td>
+                <td>Задати e-mail </td>
+            </tr>
+            <tr>
+                <td id="git init"><code>git init</code></td>
+                <td>Запуск команди в каталозі на вашому комп'ютері створить там новий .git підкаталог. Це власне локальне сховище Git і воно містить всю структуру та метадані, що складають сховище Git</td>
+            </tr>
+            <tr>
+                <td id="git status"><code>git status</code></td>
+                <td>Допомагає зрозуміти поточний стан вашої локальної робочої копії.
+                    Він відобразить будь-які зміни у ваших локальних файлах, які ви ще не зафіксували у сховищі.
+                    Крім того, він також повідомить вам, яка гілка на даний момент активна, і якщо ця гілка має якісь несинхронізовані коміти порівняно із віддаленим аналогом.</td>
+            </tr>
+            <tr>
+                <td id="git add"><code>git add</code></td>
+                <td>Позначає зміни, які будуть включені до наступного коміту.
+                    Це додає зміни до "Staging Area" Git, вміст якої потім можна обернути в новій редакції за допомогою команди "git commit".</td>
+            </tr>
+            <tr>
+                <td id="git commit"><code>git commit</code></td>
+                <td>Використовується для збереження змін у локальному сховищі.
+                    Зауважте, що перед запуском команди "git commit" вам потрібно чітко вказати Git, які зміни ви хочете включити у коміт. Це означає, що файл не буде автоматично включений до наступного коміту лише тому, що його було змінено. Натомість вам потрібно використовувати команду "git add", щоб позначити бажані зміни для включення.
+                    Також зауважте, що в Git, коміт не передається автоматично на віддалений сервер. Використання команди "git commit" зберігає лише новий об'єкт коміту у локальному сховищі Git. Обмін комітами повинен виконуватися вручну та явно (за допомогою команд "git fetch", "git pull" та "git push").</td>
+            </tr>
+            <tr>
+                <td id="git log"><code>git log</code></td>
+                <td>Показує журнали комітів.</td>
+            </tr>
+            <tr>
+                <td id="git checkout"><code>git checkout</code></td>
+                <td>Може переключити поточну активну гілку, але вона також може бути використана для відновлення файлів.
+                    Найбільш поширеним варіантом використання "checkout" є перехід на іншу гілку , що робить її новою гілкою HEAD.
+                    Інший варіант використання "checkout" - це коли ви хочете відновити історичну версію певного файлу. Таким чином, ви можете скинути окремі файли до попередніх версій, залишаючи решту проекту без змін.</td>
+            </tr>
+            <tr>
+                <td id="git branch"><code>git branch</code></td>
+                <td>Допомагає створювати, видаляти та перераховувати гілки.
+                    Це команда go-to, коли справа доходить до управління будь-яким аспектом ваших гілок - незалежно від того, в локальному сховищі чи віддалено.</td>
+            </tr>
+            <tr>
+                <td id="git push"><code>git push</code></td>
+                <td>Використовується для публікації нових локальних комітів на віддаленому сервері.
+                    Зверніть увагу, що команду "push" також можна використовувати для видалення віддаленої гілки.</td>
+            </tr>
+            <tr>
+                <td id="git pull"><code>git pull</code></td>
+                <td>Використовується для завантаження та інтеграції віддалених змін.</td>
+            </tr>
+            <tr>
+                <td id="git merge"><code>git merge</code></td>
+                <td>Злиття певних гілок проекту</td>
+            </tr>
+            <tr>
+                <td id="git clone"><code>git clone</code></td>
+                <td>Завантажує існуюче сховище Git на ваш локальний комп'ютер.
+                    Потім ви отримаєте повномасштабну локальну версію цього репозиторію Git і зможете почати працювати над проектом.
+                    Як правило, "оригінальне" сховище розташоване на віддаленому сервері, часто від такої служби, як GitHub, Bitbucket або GitLab). Потім URL-адресу цього віддаленого сховища називають "джерелом".</td>
+            </tr>
+            <tr>
+                <td id="git revert"><code>git revert</code></td>
+                <td>Скасувати деякі існуючі коміти</td>
+            </tr>
+            <tr>
+                <td id="git reset"><code>git reset</code></td>
+                <td>Скинути поточний HEAD до заданого стану</td>
+            </tr>
+            <tr>
+                <td id="git rebase"><code>git rebase</code></td>
+                <td>Перебазувує поточний HEAD у branch
+                    <b>Не перебазуйте опубліковані коміти</b>
+                    Перебазування - це процес переміщення послідовності коммітов до нової базової коммітов або їх об'єднання.</td>
+            </tr>
+            <tr>
+                <td id="git cherry-pick"><code>git cherry-pick</code></td>
+                <td>Дозволяє інтегрувати окремі коміти у поточну гілку HEAD - замість того, щоб інтегрувати всі коміти філії (наприклад, з merge та rebase ).</td>
+            </tr>
+            <tr>
+                <td id="git stash"><code>git stash</code></td>
+                <td>Може допомогти вам (тимчасово, але безпечно) зберігати нездійснені локальні зміни - і залишити вам чисту робочу копію.</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <div>
+        <p id=".gitignore">.gitignore - визначає навмисно не відстежувані файли, які потрібно ігнорувати. Детальніше <a href="https://git-scm.com/docs/gitignore" target="_blank">тут</a></p>
+    </div>
+    <hr>
+    <footer>
+        <div><p>Create by Mykola Shostak</p></div>
+        <hr>
+        <div><p>Cursore Homework #1</p></div>
+    </footer>
+</body>
+</html>
